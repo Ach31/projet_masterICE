@@ -5,5 +5,8 @@ filename = fd.askopenfilename()
 
 reader = PdfReader(filename)
 number_of_pages = len(reader.pages)
+print(reader.pages)
 page = reader.pages[0]
-text = page.extra
+#text = page.extra
+text = page.extract_text()
+print(text)
